@@ -1,0 +1,50 @@
+{
+    "37ac9c77-6a54-41ef-bc9e-693d9ec411fd": {
+        "id": "37ac9c77-6a54-41ef-bc9e-693d9ec411fd",
+        "topic": "Beach",
+        "tone": "Casual",
+        "caption": "Just vibing with Beach today \u2014 what do you think?",
+        "hashtags": [
+            "#Beach",
+            "#AI",
+            "#Explore",
+            "#Tech",
+            "#Inspiration",
+            "#Innovation"
+        ],
+        "image_url": "https://placehold.co/600x400?text=Beach",
+        "status": "draft"
+    },
+    "5676653a-d19a-4368-93ac-401166448d1a": {
+        "id": "5676653a-d19a-4368-93ac-401166448d1a",
+        "topic": "vacation",
+        "tone": "Casual",
+        "caption": "Just vibing with vacation today \u2014 what do you think?",
+        "hashtags": [
+            "#vacation",
+            "#Inspiration",
+            "#Trending",
+            "#Explore",
+            "#Tech",
+            "#AI"
+        ],
+        "image_url": "https://placehold.co/600x400?text=vacation",
+        "status": "draft"
+    },
+    "9752f718-416b-4419-b91d-3acd3fae6014": {
+        "id": "9752f718-416b-4419-b91d-3acd3fae6014",
+        "topic": "Health",
+        "tone": "Casual",
+        "caption": "Just vibing with Health today \u2014 what do you think?",
+        "hashtags": [
+            "#Health",
+            "#AI",
+            "#Inspiration",
+            "#Innovation",
+            "#Trending",
+            "#Explore"
+        ],
+        "image_url": "https://placehold.co/600x400?text=Health",
+        "status": "draft"
+    }
+}
