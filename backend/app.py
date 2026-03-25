@@ -8,6 +8,7 @@ from fastapi.middleware.cors import CORSMiddleware
 
 app = FastAPI(title="AI Instagram Post Generator")
 
+# Allow frontend (React) to call backend
 app.add_middleware(
     CORSMiddleware,
     allow_origins=["*"],
@@ -15,6 +16,7 @@ app.add_middleware(
     allow_headers=["*"],
 )
 
+# Initialize agents and storage
 content_agent = ContentAgent()
 image_agent = ImageAgent()
 storage = PostStorage()
@@ -22,6 +24,10 @@ storage = PostStorage()
 class PostRequest(BaseModel):
     topic: str
     tone: str
+
+@app.get("/")
+def read_root():
+    return {"message": "✅ Backend is running for AI Instagram Post Generator"}
 
 @app.post("/generate-post")
 def generate_post(req: PostRequest):
@@ -48,8 +54,11 @@ def post_instagram(post_id: str):
         return {"error": "Post not found"}
     post["status"] = "posted"
     storage.save_post(post_id, post)
-    return {"simulation": f"✅ Post '{post_id}' successfully posted!", "post": post}
+    return {
+        "simulation": f"✅ Post '{post_id}' successfully posted!",
+        "post": post
+    }
 
 @app.get("/posts")
 def list_posts():
-    return storage.list_posts()
+    return {"posts": storage.list_posts()}
